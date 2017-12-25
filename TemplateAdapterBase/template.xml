@@ -1,0 +1,18 @@
+<template format="4"
+    revision="1"
+    name="Adapter Base"
+    description="Android Template">
+    
+    <category value="AndroidTemplate" />
+    <formfactor value="Mobile" />
+
+    <parameter
+            id="packageName"
+            name="Package name"
+            type="string"
+            constraints="package"
+            default="com.mycompany.myapp"/>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+</template>

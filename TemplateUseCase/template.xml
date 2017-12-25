@@ -1,0 +1,40 @@
+<template format="4"
+    revision="1"
+    name="UseCase"
+    description="Tạo một UseCase, sử dụng ở package domain">
+    
+    <category value="AndroidTemplate" />
+    <formfactor value="Mobile" />
+    
+    <parameter id="useCaseName"
+        name="UseCase Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="UseCaseName"
+        help="This will crate a new Class in /domain/usecase/ insert to UseCaseFactory|UsecaseFactoryImpl|"/>
+
+    <parameter id="useCaseFuntionName"
+        name="UseCase Function Name"
+        type="string"
+        constraints="string|unique|nonempty"
+        default="useCaseFuntionName"
+        help="useCase Funtion Name"/>
+
+    <parameter id="dataResponse"
+        name="Data Response"
+        type="string"
+        constraints="string|unique|nonempty"
+        default="DataObjectClassName"
+        help="Data Response"/>
+    
+    <parameter id="repositoryName"
+        name="Repository Class Name"
+        type="class"
+        constraints="string|unique|nonempty"
+        default="UseCaseName"
+        help="RepositoryName"/>
+
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+</template>
